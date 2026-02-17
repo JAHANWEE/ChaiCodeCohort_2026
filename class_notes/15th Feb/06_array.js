@@ -16,17 +16,22 @@ console.log(singlePassenger.length)
 /* //*Array.of() method of array creates a new array from the arguments we pass , and treats every argument as an element. */
 console.log(Array.of("foo", 2, "bar", true));
 // Expected output: Array ["foo", 2, "bar", true]
+console.log(lol = ["foo", 2, "bar", true, {
+    name: "hello",
+    age: 345
+}]) // remember
 
 console.log(Array.of()); // give [];
 
-
 const trainCode = Array.from("DUST");
-console.log(trainCode)  // [ 'D', 'U', 'S', 'T' ] array fo characters
+const arr = Array.from({ length: 5 }, (_, i) => i);
 
-const tempTrain = ["D" , "O", "W", "N" , "S"];
-tempTrain.length=3; //?  this does truncation fo array , not preferred
+console.log(trainCode)  // [ 'D', 'U', 'S', 'T' ] array of characters
+
+const tempTrain = ["D", "O", "W", "N", "S"];
+tempTrain.length = 3; //?  this does truncation fo array , not preferred
 console.log(tempTrain.length); // gives 3 
-tempTrain.length=5;
+tempTrain.length = 5;
 console.log(tempTrain) //[ 'D', 'O', 'W', <2 empty items> ] bcs due to line no 28 our data is lost , even if we update teh length its of no use.
 
 //^ Array.from creates Array from strings, map , nodelist etc
@@ -35,16 +40,19 @@ console.log(tempTrain) //[ 'D', 'O', 'W', <2 empty items> ] bcs due to line no 2
 
 console.log(Array.isArray(tempTrain)) //~ give boolean value : true
 
-//key points 
+//key points
 //1. []  is preffered as it takes place in memory in accordance to elements added
-//2. Array(4)  defines 4 slots in memory 
-//3 . Array are 0 based , and if you try to access 5th element on a 4 length arary will give ://?"undefined" 
-//4. //Non mutating array methods(makes a new array): concat , slice , splice , flat , map , reduce , flatMap 
+//2. Array(4)  defines 4 slots in memory
+//3 . Array are 0 based , and if you try to access 5th element on a 4 length arrry will give ://?"undefined"
+//4. //Non mutating array methods(makes a new array): concat , slice , flat , map , reduce , flatMap
 //5. // Mutating array methods(changes the original array):push , pop , shift , unshift , splice
 //6. Searching Methods:index , indexOf , find , findIndex , includes , lastIndexOf()
 //7. To check array :Array.isArrays();
-
-
+console.log("---------------------------")
+let arrs=[1,2,3,4,5];
+console.log(arrs.indexOf(3));
+console.log(arrs.findIndex(x=> x>6));
+//findIndex() returns the index of the first element that satisfies a condition, or -1 if none match.
 
 
 

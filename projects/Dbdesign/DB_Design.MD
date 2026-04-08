@@ -16,4 +16,7 @@ Designed a database for an online coaching platform where trainers manage client
 ![Fitness Influencer Coaching Platform Part 1](fitness_part2.png)
 
 
+# Task 3: Clinic Appointment and Diagnostics Platform
 
+Designed a clean and scalable ER diagram for a clinic system that manages patients, doctors, appointments, consultations, diagnostic tests, reports, and payments.
+![Clinic Appointment and Diagnostics Platform](Clinic.png)

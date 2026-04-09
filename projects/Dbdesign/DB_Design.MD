@@ -20,3 +20,9 @@ Designed a database for an online coaching platform where trainers manage client
 
 Designed a clean and scalable ER diagram for a clinic system that manages patients, doctors, appointments, consultations, diagnostic tests, reports, and payments.
 ![Clinic Appointment and Diagnostics Platform](Clinic.png)
+
+# Task 4: Comic-Con Parking System
+
+Designed a scalable multi-zone parking system that tracks vehicles, spot allocation, parking sessions, and payments with flexibility for different vehicle types and access categories.
+
+![Comic-Con Parking System](Comicon.png)

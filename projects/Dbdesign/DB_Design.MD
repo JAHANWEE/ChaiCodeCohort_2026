@@ -26,3 +26,9 @@ Designed a clean and scalable ER diagram for a clinic system that manages patien
 Designed a scalable multi-zone parking system that tracks vehicles, spot allocation, parking sessions, and payments with flexibility for different vehicle types and access categories.
 
 ![Comic-Con Parking System](Comicon.png)
+
+# Task 5: Smart Elevator Control
+
+Designed a clean and scalable ER diagram to manage buildings, elevators, floor requests, ride assignments, and maintenance with complete tracking of elevator operations and flow.
+
+![Smart Elevator Control](elevator.png)

@@ -1,0 +1,19 @@
+.flash {
+  font-size: 12px;
+  padding: 10px 12px;
+  border-radius: 6px;
+  margin-bottom: 18px;
+  border: 1px solid;
+}
+
+.flash-success {
+  color: var(--green);
+  border-color: rgba(34, 197, 94, 0.2);
+  background: rgba(34, 197, 94, 0.05);
+}
+
+.flash-error {
+  color: var(--red);
+  border-color: rgba(239, 68, 68, 0.2);
+  background: rgba(239, 68, 68, 0.05);
+}

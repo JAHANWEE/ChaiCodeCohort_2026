@@ -1,0 +1,43 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --cream:      #faf7f2;
+  --cream-dark: #f0ebe0;
+  --ink:        #1a1a2e;
+  --ink-light:  #2d2d44;
+  --muted:      #7c7c8a;
+  --muted-light:#a8a8b8;
+
+  /* accent palette — one per card, cycling */
+  --c1: #e63946;
+  --c2: #f4a261;
+  --c3: #2a9d8f;
+  --c4: #457b9d;
+  --c5: #9b5de5;
+  --c6: #f72585;
+  --c7: #06d6a0;
+  --c8: #fb8500;
+
+  --radius: 20px;
+  --shadow: 0 8px 40px rgba(0,0,0,0.10);
+  --shadow-hover: 0 20px 60px rgba(0,0,0,0.18);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: var(--cream);
+  color: var(--ink);
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--cream-dark); }
+::-webkit-scrollbar-thumb { background: #ccc; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--muted); }

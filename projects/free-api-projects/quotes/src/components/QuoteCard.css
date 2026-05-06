@@ -1,0 +1,167 @@
+.qc {
+  --accent: var(--c1);
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 28px 26px 22px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.22s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.22s ease;
+  /* stagger animation */
+  animation: card-in 0.4s ease both;
+}
+
+@keyframes card-in {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.qc:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* top accent bar */
+.qc__bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--accent);
+  border-radius: var(--radius) var(--radius) 0 0;
+}
+
+/* big decorative " */
+.qc__deco {
+  position: absolute;
+  top: 8px;
+  right: 20px;
+  font-family: 'Playfair Display', serif;
+  font-size: 100px;
+  line-height: 1;
+  color: var(--accent);
+  opacity: 0.08;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* quote text */
+.qc__text {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--ink-light);
+  flex: 1;
+  /* clamp very long quotes */
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* footer */
+.qc__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px solid var(--cream-dark);
+}
+
+.qc__author-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.qc__avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-family: 'Playfair Display', serif;
+}
+
+.qc__author {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.qc__tag-inline {
+  font-size: 11px;
+  color: var(--muted);
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+/* action buttons */
+.qc__actions {
+  display: flex;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.qc__btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1.5px solid var(--cream-dark);
+  background: var(--cream);
+  color: var(--muted);
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.18s;
+  line-height: 1;
+}
+
+.qc__btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: #fff;
+  transform: scale(1.1);
+}
+
+.qc__btn--liked {
+  background: var(--c1);
+  border-color: var(--c1);
+  color: #fff;
+}
+
+.qc__btn--copied {
+  background: var(--c3);
+  border-color: var(--c3);
+  color: #fff;
+}
+
+.qc__btn--twitter {
+  text-decoration: none;
+}
+
+.qc__btn--twitter:hover {
+  background: #000;
+  border-color: #000;
+  color: #fff;
+  transform: scale(1.1);
+}

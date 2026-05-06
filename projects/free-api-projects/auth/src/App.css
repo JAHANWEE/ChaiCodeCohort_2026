@@ -1,0 +1,49 @@
+.page {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.card {
+  width: 100%;
+  max-width: 360px;
+}
+
+/* wordmark */
+.wordmark {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-hi);
+  letter-spacing: -0.3px;
+  margin-bottom: 36px;
+}
+
+/* tabs */
+.tabs {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 28px;
+  border-bottom: 1px solid var(--border);
+}
+
+.tab {
+  padding-bottom: 10px;
+  background: none;
+  border: none;
+  border-bottom: 1px solid transparent;
+  margin-bottom: -1px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-dim);
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.tab:hover { color: var(--text); }
+
+.tab.active {
+  color: var(--text-hi);
+  border-bottom-color: var(--text-hi);
+}

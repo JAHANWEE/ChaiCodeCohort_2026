@@ -1,0 +1,114 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4%;
+  height: 68px;
+  /* Netflix gradient: transparent → black on scroll */
+  background: linear-gradient(to bottom, rgba(0,0,0,0.85) 0%, transparent 100%);
+  transition: background 0.4s ease;
+}
+
+.navbar--scrolled {
+  background: var(--nf-darker);
+}
+
+/* ── Left ── */
+.navbar__left {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.navbar__logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.navbar__logo-svg {
+  height: 22px;
+  width: auto;
+}
+
+.navbar__nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navbar__nav-link {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--t2);
+  text-decoration: none;
+  transition: color 0.15s;
+  white-space: nowrap;
+}
+
+.navbar__nav-link:hover,
+.navbar__nav-link.active {
+  color: var(--t1);
+}
+
+/* ── Right ── */
+.navbar__right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.navbar__icon-btn {
+  background: none;
+  border: none;
+  color: var(--t2);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  transition: color 0.15s;
+}
+
+.navbar__icon-btn:hover {
+  color: var(--t1);
+}
+
+.navbar__profile {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.navbar__avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  background: var(--nf-red);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.navbar__caret {
+  color: var(--t2);
+  transition: transform 0.2s;
+}
+
+.navbar__profile:hover .navbar__caret {
+  transform: rotate(180deg);
+}
+
+/* hide nav links on small screens */
+@media (max-width: 768px) {
+  .navbar__nav { display: none; }
+  .navbar { padding: 0 5%; }
+}

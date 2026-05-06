@@ -1,0 +1,51 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(10, 10, 11, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+}
+
+.navbar__inner {
+  max-width: 1340px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.navbar__brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.navbar__icon {
+  font-size: 22px;
+  line-height: 1;
+}
+
+.navbar__name {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--orange);
+  letter-spacing: -0.5px;
+  font-family: 'Playfair Display', serif;
+}
+
+.navbar__tagline {
+  font-size: 13px;
+  color: var(--t3);
+  font-weight: 500;
+}
+
+@media (max-width: 520px) {
+  .navbar__tagline { display: none; }
+}

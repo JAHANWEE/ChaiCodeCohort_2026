@@ -1,0 +1,92 @@
+.hero-strip {
+  position: relative;
+  overflow: hidden;
+  padding: 64px 24px 56px;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+}
+
+.hero-glow {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  filter: blur(120px);
+  pointer-events: none;
+  opacity: 0.18;
+}
+
+.hero-glow-left {
+  background: var(--accent);
+  top: -200px;
+  left: -150px;
+}
+
+.hero-glow-right {
+  background: var(--pink);
+  top: -200px;
+  right: -150px;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.hero-eyebrow {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--accent-light);
+  margin-bottom: 16px;
+}
+
+.hero-title {
+  font-size: clamp(36px, 5vw, 60px);
+  font-weight: 800;
+  color: var(--text-heading);
+  letter-spacing: -2px;
+  line-height: 1.1;
+  margin-bottom: 16px;
+}
+
+.hero-gradient {
+  background: linear-gradient(135deg, var(--accent-light), var(--pink));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-sub {
+  font-size: 17px;
+  color: var(--text-muted);
+  margin-bottom: 32px;
+  line-height: 1.6;
+}
+
+.hero-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.chip {
+  font-size: 13px;
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  color: var(--text);
+  transition: all 0.2s;
+}
+
+.chip:hover {
+  border-color: var(--accent-light);
+  color: var(--accent-light);
+  background: var(--accent-subtle);
+}

@@ -1,0 +1,95 @@
+.ctrl {
+  padding: 28px 0 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Search */
+.ctrl__search-wrap {
+  position: relative;
+  max-width: 520px;
+}
+
+.ctrl__search-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--t3);
+  pointer-events: none;
+}
+
+.ctrl__search {
+  width: 100%;
+  padding: 12px 40px 12px 42px;
+  background: var(--surface2);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--t1);
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.ctrl__search:focus {
+  border-color: var(--orange);
+  box-shadow: 0 0 0 3px var(--orange-glow);
+}
+
+.ctrl__search::placeholder { color: var(--t3); }
+
+.ctrl__clear {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--t3);
+  cursor: pointer;
+  font-size: 12px;
+  padding: 4px;
+  line-height: 1;
+  transition: color 0.15s;
+}
+.ctrl__clear:hover { color: var(--t1); }
+
+/* Category pills */
+.ctrl__cats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.ctrl__cat {
+  padding: 6px 16px;
+  border-radius: 50px;
+  border: 1.5px solid var(--border);
+  background: var(--surface2);
+  color: var(--t2);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.18s;
+  letter-spacing: 0.2px;
+}
+
+.ctrl__cat:hover {
+  border-color: var(--orange);
+  color: var(--orange);
+}
+
+.ctrl__cat.active {
+  background: var(--orange);
+  border-color: var(--orange);
+  color: #fff;
+  box-shadow: 0 2px 12px var(--orange-glow);
+}
+
+/* Count */
+.ctrl__count {
+  font-size: 13px;
+  color: var(--t3);
+  font-weight: 500;
+}

@@ -1,0 +1,47 @@
+/* Error state */
+.error-state {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 80px 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.error-icon {
+  font-size: 56px;
+  line-height: 1;
+}
+
+.error-state h3 {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--text-heading);
+}
+
+.error-state p {
+  font-size: 14px;
+  color: var(--text-muted);
+  max-width: 360px;
+}
+
+.retry-btn {
+  margin-top: 8px;
+  padding: 12px 28px;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 15px;
+  font-weight: 600;
+  font-family: inherit;
+  transition: all 0.2s;
+  box-shadow: 0 4px 16px var(--accent-glow);
+}
+
+.retry-btn:hover {
+  background: var(--accent-light);
+  transform: translateY(-2px);
+}

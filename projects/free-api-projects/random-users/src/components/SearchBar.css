@@ -1,0 +1,133 @@
+.sb {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Search */
+.sb__search-wrap {
+  position: relative;
+  flex: 1;
+  min-width: 220px;
+}
+
+.sb__icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--muted);
+  pointer-events: none;
+}
+
+.sb__input {
+  width: 100%;
+  padding: 11px 40px 11px 40px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  font-size: 14px;
+  color: var(--ink);
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.sb__input:focus {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(24, 119, 242, 0.12);
+}
+
+.sb__input::placeholder { color: var(--muted); }
+
+.sb__clear {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--muted);
+  cursor: pointer;
+  font-size: 12px;
+  padding: 4px;
+  line-height: 1;
+  transition: color 0.15s;
+}
+.sb__clear:hover { color: var(--ink); }
+
+/* Right controls */
+.sb__right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+/* Gender pills */
+.sb__gender {
+  display: flex;
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.sb__gender-btn {
+  padding: 9px 16px;
+  border: none;
+  background: none;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--muted);
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+  white-space: nowrap;
+}
+
+.sb__gender-btn + .sb__gender-btn {
+  border-left: 1px solid var(--border);
+}
+
+.sb__gender-btn:hover { background: var(--bg); color: var(--ink); }
+
+.sb__gender-btn.active {
+  background: var(--blue);
+  color: #fff;
+}
+
+/* View toggle */
+.sb__view {
+  display: flex;
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.sb__view-btn {
+  padding: 9px 12px;
+  border: none;
+  background: none;
+  color: var(--muted);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: background 0.15s, color 0.15s;
+}
+
+.sb__view-btn + .sb__view-btn {
+  border-left: 1px solid var(--border);
+}
+
+.sb__view-btn:hover { background: var(--bg); color: var(--ink); }
+
+.sb__view-btn.active {
+  background: var(--blue);
+  color: #fff;
+}
+
+@media (max-width: 640px) {
+  .sb { flex-direction: column; align-items: stretch; }
+  .sb__right { justify-content: space-between; }
+}

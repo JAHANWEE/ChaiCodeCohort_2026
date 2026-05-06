@@ -1,0 +1,21 @@
+.app {
+  min-height: 100vh;
+  background: var(--bg);
+}
+
+.app__main {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 24px 20px 80px;
+}
+
+.app__top {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 600px) {
+  .app__main { padding: 16px 12px 60px; }
+}

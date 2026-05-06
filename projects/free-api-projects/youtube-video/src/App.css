@@ -1,0 +1,9 @@
+.app {
+  min-height: 100vh;
+  background: var(--nf-black);
+}
+
+.main-content {
+  /* no max-width — full bleed like Netflix */
+  width: 100%;
+}

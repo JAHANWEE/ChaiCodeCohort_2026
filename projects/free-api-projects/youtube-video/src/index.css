@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Netflix+Sans:wght@400;500;700&family=Inter:wght@400;500;600;700;800&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Netflix palette */
+  --nf-black:   #141414;
+  --nf-dark:    #181818;
+  --nf-darker:  #111111;
+  --nf-card:    #1f1f1f;
+  --nf-red:     #e50914;
+  --nf-red-dim: #b20710;
+
+  /* text */
+  --t1: #ffffff;
+  --t2: #e5e5e5;
+  --t3: #a3a3a3;
+  --t4: #737373;
+
+  /* misc */
+  --radius-card: 4px;
+  --shadow-card: 0 4px 24px rgba(0,0,0,0.7);
+  --shadow-hover: 0 12px 40px rgba(0,0,0,0.9);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: var(--nf-black);
+  color: var(--t1);
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* custom scrollbar */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--nf-black); }
+::-webkit-scrollbar-thumb { background: #333; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--nf-red); }

@@ -1,0 +1,71 @@
+.profile {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.profile-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--border-hi);
+  color: var(--text-hi);
+  font-size: 15px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.profile-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-hi);
+  margin-bottom: 2px;
+}
+
+.profile-email {
+  font-size: 12px;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.profile-role {
+  display: inline-block;
+  font-size: 11px;
+  color: var(--text-dim);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 1px 7px;
+  margin-bottom: 28px;
+}
+
+.btn-logout {
+  width: 100%;
+  padding: 9px;
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 500;
+  transition: border-color 0.15s, color 0.15s;
+}
+
+.btn-logout:hover:not(:disabled) {
+  border-color: var(--red);
+  color: var(--red);
+}
+
+.btn-logout:disabled { opacity: 0.4; cursor: not-allowed; }
+
+.spinner-muted {
+  width: 12px;
+  height: 12px;
+  border: 1.5px solid var(--border-hi);
+  border-top-color: var(--text);
+  border-radius: 50%;
+  animation: spin 0.65s linear infinite;
+  display: inline-block;
+}

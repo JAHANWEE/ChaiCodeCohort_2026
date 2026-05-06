@@ -1,0 +1,46 @@
+.mg {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 22px;
+  align-items: start;
+}
+
+.mg__state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 100px 16px;
+  text-align: center;
+}
+
+.mg__state-icon { font-size: 52px; }
+
+.mg__state p {
+  font-size: 16px;
+  color: var(--t2);
+}
+
+.mg__state button {
+  padding: 11px 28px;
+  background: var(--orange);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 14px;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.15s;
+  box-shadow: 0 4px 16px var(--orange-glow);
+}
+
+.mg__state button:hover {
+  background: var(--orange-dim);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+  .mg { grid-template-columns: 1fr; }
+}

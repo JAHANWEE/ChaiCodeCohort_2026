@@ -1,0 +1,60 @@
+@keyframes shimmer {
+  0%   { background-position: -600px 0; }
+  100% { background-position:  600px 0; }
+}
+
+.sk__bar,
+.sk__line,
+.sk__avatar,
+.sk__author {
+  background: linear-gradient(90deg, #ede8e0 25%, #f5f1ea 50%, #ede8e0 75%);
+  background-size: 600px 100%;
+  animation: shimmer 1.4s infinite linear;
+  border-radius: 6px;
+}
+
+.sk {
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 28px 26px 22px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow: hidden;
+  position: relative;
+}
+
+.sk__bar {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  border-radius: var(--radius) var(--radius) 0 0;
+}
+
+.sk__line { height: 14px; }
+.sk__line--full  { width: 100%; }
+.sk__line--long  { width: 90%; }
+.sk__line--med   { width: 70%; }
+.sk__line--short { width: 45%; }
+
+.sk__footer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 8px;
+  padding-top: 14px;
+  border-top: 1px solid var(--cream-dark);
+}
+
+.sk__avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.sk__author {
+  height: 12px;
+  width: 100px;
+}

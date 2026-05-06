@@ -1,0 +1,57 @@
+.qg {
+  display: grid;
+  /* masonry-like: 3 cols, cards fill naturally */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  align-items: start;
+}
+
+/* Error */
+.qg__error,
+.qg__empty {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 80px 16px;
+  text-align: center;
+  color: var(--muted);
+}
+
+.qg__error-emoji,
+.qg__empty-emoji {
+  font-size: 48px;
+}
+
+.qg__error p,
+.qg__empty p {
+  font-size: 16px;
+  color: var(--ink-light);
+}
+
+.qg__error button {
+  padding: 12px 28px;
+  background: var(--ink);
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: opacity 0.15s, transform 0.15s;
+}
+
+.qg__error button:hover {
+  opacity: 0.85;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 1024px) {
+  .qg { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .qg { grid-template-columns: 1fr; }
+}

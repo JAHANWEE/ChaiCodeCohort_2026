@@ -1,0 +1,52 @@
+@keyframes shimmer {
+  0%   { background-position: -700px 0; }
+  100% { background-position:  700px 0; }
+}
+
+.sk__thumb,
+.sk__line,
+.sk__circle {
+  background: linear-gradient(90deg, #1f1f25 25%, #2a2a35 50%, #1f1f25 75%);
+  background-size: 700px 100%;
+  animation: shimmer 1.5s infinite linear;
+  border-radius: 6px;
+}
+
+.sk {
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.sk__thumb {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 0;
+}
+
+.sk__body {
+  padding: 16px 18px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sk__line { height: 13px; }
+.sk__line--full  { width: 100%; }
+.sk__line--long  { width: 85%; }
+.sk__line--med   { width: 65%; }
+.sk__line--short { width: 40%; }
+
+.sk__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 4px;
+}
+
+.sk__circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}

@@ -1,0 +1,104 @@
+@keyframes shimmer {
+  0%   { background-position: -700px 0; }
+  100% { background-position:  700px 0; }
+}
+
+.sk__cover,
+.sk__circle,
+.sk__line,
+.sk__chip,
+.sk__divider {
+  background: linear-gradient(90deg, #27272a 25%, #3f3f46 50%, #27272a 75%);
+  background-size: 700px 100%;
+  animation: shimmer 1.4s infinite linear;
+  border-radius: 6px;
+}
+
+/* ── Grid skeleton ── */
+.sk--grid {
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.sk__cover {
+  height: 80px;
+  border-radius: 0;
+}
+
+.sk__avatar-area {
+  padding: 0 20px;
+  margin-top: -28px;
+}
+
+.sk__circle {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  border: 3px solid var(--surface);
+}
+
+.sk__circle--sm {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.sk__body {
+  padding: 10px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sk__line { height: 13px; }
+.sk__line--full  { width: 100%; }
+.sk__line--long  { width: 85%; }
+.sk__line--med   { width: 60%; }
+.sk__line--short { width: 40%; }
+
+.sk__chips {
+  display: flex;
+  gap: 8px;
+}
+
+.sk__chip {
+  height: 22px;
+  width: 56px;
+  border-radius: 20px;
+}
+
+.sk__divider {
+  height: 1px;
+  width: 100%;
+  border-radius: 0;
+  margin: 2px 0;
+}
+
+/* ── List skeleton ── */
+.sk--list {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px 18px;
+}
+
+.sk__lines--row {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sk__hide-sm {
+  flex: 1;
+}
+
+@media (max-width: 640px) {
+  .sk__hide-sm { display: none; }
+}
